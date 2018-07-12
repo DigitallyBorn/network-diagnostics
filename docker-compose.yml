@@ -4,7 +4,7 @@ services:
   tester:
     image: telegraf
     volumes:
-      - "./telegraf.conf:/etc/telegraf/telegraf.conf:ro"
+      - "./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro"
     depends_on:
       - influxdb
     restart: on-failure
@@ -21,5 +21,10 @@ services:
       - influxdb
     restart: on-failure
     user: "104"
+    volumes: 
+      - "./grafana/grafana.ini:/etc/grafana/grafana.ini:ro"
+      - "./grafana/datasources.yaml:/etc/grafana/provisioning/datasources/telegraf.yaml:ro"
+      - "./grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/network.yaml:ro"
+      - "./grafana/dashboard.json:/etc/grafana/dashboards/network.json:ro"
     environment: 
       - GF_DATABASE_TYPE=sqlite3

@@ -6,10 +6,9 @@ This is meant as an _overly_ simple mechanism to collect and visualize network s
 Docker for your OS.
 
 ## Get started
+1. Start the services:
 ```bash
 docker-compose up
 ```
 
-1. Open http://localhost:3000/dashboards
-2. Select the `Network Stats` dashboard
-3. Watch data roll in
+2. Open the sweet dashboard: http://localhost:3000/d/UyopENOiz/network-stats

@@ -6,9 +6,10 @@ This is meant as an _overly_ simple mechanism to collect and visualize network s
 Docker for your OS.
 
 ## Get started
-1. Start the services:
+1. Clone the repository
+2. Start the services:
 ```bash
 docker-compose up
 ```
-
-2. Open the sweet dashboard: http://localhost:3000/d/UyopENOiz/network-stats
+3. Open the sweet dashboard: http://localhost:3000/d/UyopENOiz/network-stats
+4. Wait until data rolls in
